@@ -22,3 +22,6 @@
 /sys/ontim_bootinfo/gps_lna                  u:object_r:sysfs_gps:s0
 /sys/ontim_bootinfo/gps_reset                u:object_r:sysfs_gps:s0
 /dev/ttyHS1                                  u:object_r:gps_device:s0
+
+# Dolby
+/(vendor|system/vendor)/bin/hw/vendor\.dolby\.hardware\.dms@1\.0-service                     u:object_r:hal_dms_default_exec:s0

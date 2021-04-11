@@ -1,3 +1,9 @@
 allow init self:netlink_route_socket rw_socket_perms_no_ioctl;
 allow init self:rawip_socket create_socket_perms_no_ioctl;
 allow init socket_device:sock_file { unlink setattr create };
+
+# Dolby
+allow init vendor_data_file:file { lock };
+allow init hal_audio_default:binder { call };
+allow init platform_app:binder { call };
+allow init same_process_hal_file:file { read getattr map execute open };
